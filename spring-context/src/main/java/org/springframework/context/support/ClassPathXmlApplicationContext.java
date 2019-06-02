@@ -206,6 +206,7 @@ public class ClassPathXmlApplicationContext extends AbstractXmlApplicationContex
 	@Override
 	@Nullable
 	protected Resource[] getConfigResources() {
+		// 根据路径获取资源
 		return this.configResources;
 	}
 

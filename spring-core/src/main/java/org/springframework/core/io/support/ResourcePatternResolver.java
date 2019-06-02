@@ -61,7 +61,7 @@ public interface ResourcePatternResolver extends ResourceLoader {
 	 * @see org.springframework.core.io.ResourceLoader#CLASSPATH_URL_PREFIX
 	 */
 	String CLASSPATH_ALL_URL_PREFIX = "classpath*:";
-
+    // 允许返回多个
 	/**
 	 * Resolve the given location pattern into Resource objects.
 	 * <p>Overlapping resource entries that point to the same physical

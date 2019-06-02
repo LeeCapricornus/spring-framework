@@ -32,6 +32,7 @@ import org.springframework.lang.Nullable;
 @FunctionalInterface
 public interface ProtocolResolver {
 
+     // 专门用来加载资源
 	/**
 	 * Resolve the given location against the given resource loader
 	 * if this implementation's protocol matches.

@@ -25,7 +25,7 @@ import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 
 import org.springframework.lang.Nullable;
-
+// Resource是继承InputStreamResource的统一资源接口，是spring框架中统一资源标识符
 /**
  * Interface for a resource descriptor that abstracts from the actual
  * type of underlying resource, such as a file or class path resource.
@@ -50,7 +50,7 @@ import org.springframework.lang.Nullable;
  * @see InputStreamResource
  */
 public interface Resource extends InputStreamSource {
-
+    // 判断资源是否存在
 	/**
 	 * Determine whether this resource actually exists in physical form.
 	 * <p>This method performs a definitive existence check, whereas the
@@ -58,7 +58,7 @@ public interface Resource extends InputStreamSource {
 	 * descriptor handle.
 	 */
 	boolean exists();
-
+    // 资源是否可读
 	/**
 	 * Indicate whether non-empty contents of this resource can be read via
 	 * {@link #getInputStream()}.
@@ -73,7 +73,7 @@ public interface Resource extends InputStreamSource {
 	default boolean isReadable() {
 		return exists();
 	}
-
+   // 资源是否可以打开 jdk8写法
 	/**
 	 * Indicate whether this resource represents a handle with an open stream.
 	 * If {@code true}, the InputStream cannot be read multiple times,

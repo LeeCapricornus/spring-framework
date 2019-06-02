@@ -46,7 +46,7 @@ import org.springframework.core.AliasRegistry;
  * @see PropertiesBeanDefinitionReader
  */
 public interface BeanDefinitionRegistry extends AliasRegistry {
-
+    // 往注册表中注册一个新的BeanDefinition实例
 	/**
 	 * Register a new bean definition with this registry.
 	 * Must support RootBeanDefinition and ChildBeanDefinition.
@@ -61,14 +61,14 @@ public interface BeanDefinitionRegistry extends AliasRegistry {
 	 */
 	void registerBeanDefinition(String beanName, BeanDefinition beanDefinition)
 			throws BeanDefinitionStoreException;
-
+    // 移除注册表中已经注册的BeanDefinition实例
 	/**
 	 * Remove the BeanDefinition for the given name.
 	 * @param beanName the name of the bean instance to register
 	 * @throws NoSuchBeanDefinitionException if there is no such bean definition
 	 */
 	void removeBeanDefinition(String beanName) throws NoSuchBeanDefinitionException;
-
+    // 从注册中取得指定的BeanDefinition实例
 	/**
 	 * Return the BeanDefinition for the given bean name.
 	 * @param beanName name of the bean to find a definition for
@@ -76,14 +76,14 @@ public interface BeanDefinitionRegistry extends AliasRegistry {
 	 * @throws NoSuchBeanDefinitionException if there is no such bean definition
 	 */
 	BeanDefinition getBeanDefinition(String beanName) throws NoSuchBeanDefinitionException;
-
+    // 判断BeanDefinition实例中是否注册表（是否注册）
 	/**
 	 * Check if this registry contains a bean definition with the given name.
 	 * @param beanName the name of the bean to look for
 	 * @return if this registry contains a bean definition with the given name
 	 */
 	boolean containsBeanDefinition(String beanName);
-
+	// 取得注册中所有BeanDefinition实例的beanName标识
 	/**
 	 * Return the names of all beans defined in this registry.
 	 * @return the names of all beans defined in this registry,
@@ -91,6 +91,7 @@ public interface BeanDefinitionRegistry extends AliasRegistry {
 	 */
 	String[] getBeanDefinitionNames();
 
+	// 实例的个数
 	/**
 	 * Return the number of beans defined in the registry.
 	 * @return the number of beans defined in the registry

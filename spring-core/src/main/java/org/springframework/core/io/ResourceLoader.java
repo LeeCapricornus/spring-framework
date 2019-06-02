@@ -19,6 +19,7 @@ package org.springframework.core.io;
 import org.springframework.lang.Nullable;
 import org.springframework.util.ResourceUtils;
 
+// 资源加载器，提供了两个接口，一个是获取类加载器，另一个是获取资源
 /**
  * Strategy interface for loading resources (e.. class path or file system
  * resources). An {@link org.springframework.context.ApplicationContext}
